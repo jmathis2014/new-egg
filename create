@@ -37,6 +37,8 @@ function load_build_version() {
 
     # get build version #
     BUILD=$(cat build-version.txt)
+
+    echo $BUILD
 }
 
 #--#
