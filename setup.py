@@ -1,11 +1,11 @@
 from setuptools import setup
 
 setup(name='egg-test',
-      version='1.0',
+      version='1.1',
       description='Egg testing Package',
       url='https://',
       author='James Mathis',
-      author_email='james_mathis',
+      author_email='james_mathis@americanwell.com',
       license='Github',
         # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
         classifiers=[
@@ -27,7 +27,7 @@ setup(name='egg-test',
         ],
       packages=['egg'],
       install_requires=[
-          'requests'
+           'requests',
       ],
 #      scripts=[''],
       zip_safe=False)
