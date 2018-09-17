@@ -55,7 +55,7 @@ function create_package() {
 function repo_add() {
 
     # move new package to repo #
-    cp "dist/$BUILD.tar.gz $REPO_LOCATION."
+    cp dist/$BUILD.tar.gz $REPO_LOCATION.
 
     # add package to repo list #
     dir2pi $REPO_LOCATION
