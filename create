@@ -35,9 +35,8 @@ REPO_LOCATION="/var/www/html/packages/"
 # load build version #
 function load_build_version() {
 
-    ls -al
     # get build version #
-    BUILD=$(cat ~/tmp/new-egg/build_version.txt)
+    BUILD=$(cat build-version.txt)
 }
 
 #--#
