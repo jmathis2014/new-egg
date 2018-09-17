@@ -27,7 +27,7 @@ setup(name='egg-test',
         ],
       packages=['egg'],
       install_requires=[
-          'requests',
+          'requests'
       ],
       scripts=[''],
       zip_safe=False)
