@@ -1,0 +1,78 @@
+#!/bin/bash
+#-----------------------------------------------------------------------------#
+# A P P  I N F O R M A T I O N #
+#-----------------------------------------------------------------------------#
+#
+# NAME: MANUAL AUTOMATION AGENT INSTALLER
+# DATE: 9/17/2018
+# CREATOR: James Mathis
+#
+# DESCRIPTION:
+#
+# VERSION: 1.0
+#
+#-----------------------------------------------------------------------------#
+
+#-----------#
+# variables #
+#-----------#
+# colors #
+LT_RED='\033[1;31m'
+PURPLE='\033[0;35m'
+LT_PURPLE='\033[1;35m'
+NC='\033[0m'
+
+# return codes #
+EXIT_SUCCESSFUL=0
+EXIT_FAILURE=1
+
+REPO_LOCATION="/var/www/html/packages/"
+
+#-----------#
+# FUNCTIONS #
+#--------------------------------------#
+
+# load build version #
+function load_buid_version() {
+
+    # get build version #
+    source build_version.txt
+
+}
+
+#--#
+
+# create new python package #
+function create_package() {
+
+    # create new package #
+    python setup.py sdist
+}
+
+#--#
+
+# add package to repo #
+function repo_add() {
+
+    # move new package to repo #
+    cp "dist/$BUILD.tar.gz $REPO_LOCATION."
+
+    # add package to repo list #
+    dir2pi $REPO_LOCATION
+}
+
+#--#
+
+#----------#
+# MAINLOOP #
+#--------------------------------------#
+
+# store build version #
+load_build_version
+
+# create new python package #
+create_package
+
+# move package to repo #
+repo_add
+
