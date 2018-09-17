@@ -33,7 +33,7 @@ REPO_LOCATION="/var/www/html/packages/"
 #--------------------------------------#
 
 # load build version #
-function load_buid_version() {
+function load_build_version() {
 
     # get build version #
     source "./build_version.txt"
