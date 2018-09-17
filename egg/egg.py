@@ -8,7 +8,7 @@ import random
 import logging
 import logging.handlers
 
-class egg:
+class testingEgg:
 
     def __init__(self):
         pass
