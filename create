@@ -36,7 +36,7 @@ REPO_LOCATION="/var/www/html/packages/"
 function load_build_version() {
 
     # get build version #
-    BUILD=$(cat build_version.txt)
+    BUILD=$(cat ./build_version.txt)
 }
 
 #--#
