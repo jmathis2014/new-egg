@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='egg-test',
-      version='1.1',
+      version='1.2',
       description='Egg testing Package',
       url='https://',
       author='James Mathis',
